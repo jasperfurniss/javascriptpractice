@@ -59,31 +59,30 @@ console.assert(isVowel('a'),'isVowel');
 //For example, translate("this is fun") should return the string "tothohisos isos fofunon".
 // ---------------------
 
-// function rovar(phrase){
-//     "use strict";
-//     var contentSplit = phrase.split("");
-//     var consanant = !isVowel;
-//     var result = "";
-//     contentSplit.forEach(function(letter){
-//     if (consanant(letter) || letter != " "){
-//       letter = letter + "o" + letter;
-//       result += letter;
-//     }else{
-//       result += letter;
-//     }
-//       return(result);
-// }
-//
-//     console.assert((rovar("this is fun") == "tothohisos isos fofunon"), 'rovar');
+function rovar(phrase){
+    "use strict";
+    var contentSplit = phrase.split("");
+    var consanant = !isVowel;
+    var result = "";
+    contentSplit.forEach(function(letter){
+    if (consanant(letter) && letter != " "){
+      letter = letter + "o" + letter;
+      result += letter;
+    }else{
+      result += letter;
+    }
+      return(result);
+});
+    console.assert(rovar("this is fun") == "tothohisos isos fofunon");
 
-
+}
 // ---------------------
 // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers.
 //For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
 // ---------------------
 
 
-function sum(numbers){
+function sumfx(numbers){
     "use strict";
     var sum = 0;
     numbers.forEach(function(num){
@@ -92,7 +91,7 @@ function sum(numbers){
     return sum;
 }
 
-  console.assert(sum( [5, 10, 20, 100] ) == 135, 'sum');
+  console.assert(sumfx( [5, 10, 20, 100] ) == 135, 'sumfx');
 
 
 function multy(red){
